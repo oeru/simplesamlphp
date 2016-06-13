@@ -1,0 +1,35 @@
+Jun 13 10:34:59 simplesamlphp-idp DEBUG [75f70dcffd] Loading state: '_fd4b298b9d07345f7a53157cab6bbeade27213846b:https://directory.oeru.org/sso/module.php/core/as_login.php?AuthId=admin&ReturnTo=https%3A%2F%2Fdirectory.oeru.org%2Fsso%2Fmodule.php%2Fcore%2Flogin-admin.php%3FReturnTo%3Dhttps%253A%252F%252Fdirectory.oeru.org%252Fsso%252Fmodule.php%252Fcore%252Ffrontpage_federation.php'
+Jun 13 10:34:59 simplesamlphp-idp DEBUG [75f70dcffd] Session: 'admin' not valid because we are not authenticated.
+Jun 13 10:34:59 simplesamlphp-idp DEBUG [75f70dcffd] Saved state: '_d98591aa8960c5a6b8365d100478e57c58a284affd:https://directory.oeru.org/sso/module.php/core/as_login.php?AuthId=admin&ReturnTo=https%3A%2F%2Fdirectory.oeru.org%2Fsso%2Fmodule.php%2Fcore%2Flogin-admin.php%3FReturnTo%3Dhttps%253A%252F%252Fdirectory.oeru.org%252Fsso%252Fmodule.php%252Fcore%252Ffrontpage_federation.php'
+Jun 13 10:35:00 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/login]
+Jun 13 10:35:00 simplesamlphp-idp DEBUG [75f70dcffd] Loading state: '_d98591aa8960c5a6b8365d100478e57c58a284affd:https://directory.oeru.org/sso/module.php/core/as_login.php?AuthId=admin&ReturnTo=https%3A%2F%2Fdirectory.oeru.org%2Fsso%2Fmodule.php%2Fcore%2Flogin-admin.php%3FReturnTo%3Dhttps%253A%252F%252Fdirectory.oeru.org%252Fsso%252Fmodule.php%252Fcore%252Ffrontpage_federation.php'
+Jun 13 10:35:27 simplesamlphp-idp DEBUG [75f70dcffd] Loading state: '_d98591aa8960c5a6b8365d100478e57c58a284affd:https://directory.oeru.org/sso/module.php/core/as_login.php?AuthId=admin&ReturnTo=https%3A%2F%2Fdirectory.oeru.org%2Fsso%2Fmodule.php%2Fcore%2Flogin-admin.php%3FReturnTo%3Dhttps%253A%252F%252Fdirectory.oeru.org%252Fsso%252Fmodule.php%252Fcore%252Ffrontpage_federation.php'
+Jun 13 10:35:27 simplesamlphp-idp NOTICE STAT [75f70dcffd] User 'admin' has been successfully authenticated.
+Jun 13 10:35:27 simplesamlphp-idp DEBUG [75f70dcffd] Deleting state: '_d98591aa8960c5a6b8365d100478e57c58a284affd'
+Jun 13 10:35:27 simplesamlphp-idp DEBUG [75f70dcffd] Session: doLogin("admin")
+Jun 13 10:35:27 simplesamlphp-idp DEBUG [75f70dcffd] Loading state: '_d98591aa8960c5a6b8365d100478e57c58a284affd:https://directory.oeru.org/sso/module.php/core/as_login.php?AuthId=admin&ReturnTo=https%3A%2F%2Fdirectory.oeru.org%2Fsso%2Fmodule.php%2Fcore%2Flogin-admin.php%3FReturnTo%3Dhttps%253A%252F%252Fdirectory.oeru.org%252Fsso%252Fmodule.php%252Fcore%252Ffrontpage_federation.php'
+Jun 13 10:35:28 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 13 10:35:28 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 13 10:35:28 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 13 10:35:28 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 13 10:35:28 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 13 10:35:36 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 13 10:35:50 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 13 10:35:50 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 13 10:35:50 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 13 10:35:50 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 13 10:35:55 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 13 10:35:55 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/errors]
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] SimpleSAML_Error_Error: METADATA
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/saml2/idp/metadata.php:222 (N/A)
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] Caused by: Exception: saml20-idp-hosted/'https://directory.oeru.org/sso/saml2/idp/metadata.php': Unable to load certificate/public key from file "/home/www/sso/simplesamlphp-1.14.4/cert/server.crt".
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] 2 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Configuration.php:1246 (SimpleSAML_Configuration::getPublicKeys)
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] 1 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Utils/Crypto.php:210 (SimpleSAML\Utils\Crypto::loadPublicKey)
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/saml2/idp/metadata.php:41 (N/A)
+Jun 13 10:35:55 simplesamlphp-idp ERROR [75f70dcffd] Error report with id 5d13682b generated.
+Jun 13 10:36:00 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 13 10:36:00 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 13 10:36:00 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 13 10:36:00 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
