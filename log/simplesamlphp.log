@@ -33,3 +33,73 @@ Jun 13 10:36:00 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session foun
 Jun 13 10:36:00 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
 Jun 13 10:36:00 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
 Jun 13 10:36:00 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 14 01:15:29 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 01:15:29 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 01:15:29 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 01:16:29 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 01:16:29 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 01:16:29 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 01:16:29 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 14 01:20:05 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 01:20:05 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/errors]
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] SimpleSAML_Error_Error: UNHANDLEDEXCEPTION
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/module.php:180 (N/A)
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] Caused by: Exception: authsources['oeru-idp']: Unable to load certificate/public key from file "/home/www/sso/simplesamlphp-1.14.4/cert/saml.crt".
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] 3 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Configuration.php:1246 (SimpleSAML_Configuration::getPublicKeys)
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] 2 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Utils/Crypto.php:210 (SimpleSAML\Utils\Crypto::loadPublicKey)
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] 1 /home/www/sso/simplesamlphp-1.14.4/modules/saml/www/sp/metadata.php:110 (require)
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/module.php:137 (N/A)
+Jun 14 01:20:05 simplesamlphp-idp ERROR [75f70dcffd] Error report with id 111c9029 generated.
+Jun 14 01:20:21 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 01:20:21 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 01:20:21 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 01:20:21 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 14 01:20:47 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 01:20:47 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/errors]
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] SimpleSAML_Error_Error: METADATA
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/saml2/idp/metadata.php:222 (N/A)
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] Caused by: Exception: saml20-idp-hosted/'https://directory.oeru.org/sso/saml2/idp/metadata.php': Unable to load certificate/public key from file "/home/www/sso/simplesamlphp-1.14.4/cert/server.crt".
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] 2 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Configuration.php:1246 (SimpleSAML_Configuration::getPublicKeys)
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] 1 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Utils/Crypto.php:210 (SimpleSAML\Utils\Crypto::loadPublicKey)
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/saml2/idp/metadata.php:41 (N/A)
+Jun 14 01:20:47 simplesamlphp-idp ERROR [75f70dcffd] Error report with id 62d9e2a6 generated.
+Jun 14 01:20:53 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 01:20:53 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 01:20:53 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 01:20:53 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 14 02:07:54 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 02:07:54 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 02:07:54 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 02:07:54 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 14 02:08:48 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 02:08:48 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 02:08:48 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/modules/core/dictionaries/frontpage]
+Jun 14 02:08:48 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/admin]
+Jun 14 02:23:55 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 02:23:55 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/errors]
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] SimpleSAML_Error_Error: UNHANDLEDEXCEPTION
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/module.php:180 (N/A)
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] Caused by: Exception: authsources['oeru-idp']: Unable to load certificate/public key from file "/home/www/sso/simplesamlphp-1.14.4/cert/saml.crt".
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] 3 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Configuration.php:1246 (SimpleSAML_Configuration::getPublicKeys)
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] 2 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Utils/Crypto.php:210 (SimpleSAML\Utils\Crypto::loadPublicKey)
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] 1 /home/www/sso/simplesamlphp-1.14.4/modules/saml/www/sp/metadata.php:110 (require)
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/module.php:137 (N/A)
+Jun 14 02:23:55 simplesamlphp-idp ERROR [75f70dcffd] Error report with id 61fff5a2 generated.
+Jun 14 02:25:59 simplesamlphp-idp DEBUG [75f70dcffd] Session: Valid session found with 'admin'.
+Jun 14 02:25:59 simplesamlphp-idp DEBUG [75f70dcffd] Template: Reading [/home/www/sso/simplesamlphp-1.14.4/dictionaries/errors]
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] SimpleSAML_Error_Error: UNHANDLEDEXCEPTION
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/module.php:180 (N/A)
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] Caused by: Exception: authsources['oeru-idp']: Unable to load certificate/public key from file "/home/www/sso/simplesamlphp-1.14.4/cert/saml.crt".
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] Backtrace:
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] 3 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Configuration.php:1246 (SimpleSAML_Configuration::getPublicKeys)
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] 2 /home/www/sso/simplesamlphp-1.14.4/lib/SimpleSAML/Utils/Crypto.php:210 (SimpleSAML\Utils\Crypto::loadPublicKey)
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] 1 /home/www/sso/simplesamlphp-1.14.4/modules/saml/www/sp/metadata.php:110 (require)
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] 0 /home/www/sso/simplesamlphp-1.14.4/www/module.php:137 (N/A)
+Jun 14 02:26:00 simplesamlphp-idp ERROR [75f70dcffd] Error report with id 7d6aa967 generated.

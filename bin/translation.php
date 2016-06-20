@@ -2,7 +2,9 @@
 <?php
 
 // This is the base directory of the SimpleSAMLphp installation
-$baseDir = dirname(dirname(__FILE__));
+//$baseDir = dirname(dirname(__FILE__));
+// Dave Lane, dave@oerufoundation.org 2016-06-16
+$baseDir = dirname(SimpleSAML_Configuration::getCurrentDir());
 
 // Add library autoloader
 require_once($baseDir . '/lib/_autoload.php');
