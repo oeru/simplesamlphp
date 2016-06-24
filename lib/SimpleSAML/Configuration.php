@@ -493,30 +493,6 @@ class SimpleSAML_Configuration
         return $this->resolvePath($path).'/';
     }
 
-
-    /**
-     * Get the current working dir based on the current script file
-     * this is intended to replace the use of $_SERVER['DOCUMENT_ROOT']: __FILE__ resolves
-     * symbolic links in the path, which is not what we want.
-     * It's quite advantageous to be able to have symbolically linked code trees
-     * for SimpleSAMLPHP from a maintenance perspective. So trying to consolidate
-     * this request here, and reuse it thoughout the codebase
-     * Introduced by Dave Lane, dave@oerufoundation.org 2016-06-16
-     */
-    /*public function getCurrentDir()
-    {
-	if ($_SERVER['DOCUMENT_ROOT'] != null) {
-            $dir = $_SERVER['DOCUMENT_ROOT'];
-            printf("DEBUG: DOCUMENT_ROOT = " . $_SERVER['DOCUMENT_ROOT'] .
-               ", __FILE__ = " . __FILE__ . "... \n");
-            return $dir;
-	} else {
-            printf("DEBUG: no DOCUMENT_ROOT defined! Not sure where we are...");
-	    halt;
-        }
-    }*/
-
-
     /**
      * Retrieve the base directory for this SimpleSAMLphp installation.
      *

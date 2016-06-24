@@ -7,7 +7,8 @@
 
 function Tests_Auth_OpenID_datafile($name, $reader)
 {
-    $path = dirname(realpath(__FILE__));
+    //$path = dirname(realpath(__FILE__));
+    $path = $_SERVER['DOCUMENT_ROOT'];
     $sep = DIRECTORY_SEPARATOR;
     $filename = $path . $sep . 'data' . $sep . $name;
     $data = $reader($filename);
@@ -57,4 +58,3 @@ class OpenIDTestMixin extends PHPUnit_Framework_TestCase {
                            $error_message);
     }
 }
-

@@ -24,7 +24,8 @@ function includeAdd($dir, $at_start=false)
  */
 function getParent()
 {
-    return dirname(dirname(realpath(__FILE__)));
+//    return dirname(dirname(realpath(__FILE__)));
+      return dirname($_SERVER['DOCUMENT_ROOT']);
 }
 
 ?>
