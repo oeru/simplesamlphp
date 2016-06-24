@@ -30,7 +30,7 @@ class SAML2_Utilities_FileTest extends \PHPUnit_Framework_TestCase
      */
     public function an_existing_readable_file_can_be_loaded()
     {
-        $contents = SAML2_Utilities_File::getFileContents(__DIR__ . '/File/can_be_loaded.txt');
+        $contents = SAML2_Utilities_File::getFileContents($_SERVER['DOCUMENT_ROOT'] . '/File/can_be_loaded.txt');
 
         $this->assertEquals("Yes we can!\n", $contents, 'The contents of the loaded file differ from what was expected');
     }

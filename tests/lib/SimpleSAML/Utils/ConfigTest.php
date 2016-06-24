@@ -15,7 +15,7 @@ class Utils_ConfigTest extends PHPUnit_Framework_TestCase
         putenv('SIMPLESAMLPHP_CONFIG_DIR');
         $configDir = \SimpleSAML\Utils\Config::getConfigDir();
 
-        $this->assertEquals($configDir, dirname(dirname(dirname(dirname(__DIR__)))) . '/config');
+        $this->assertEquals($configDir, dirname(dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT'])))) . '/config');
     }
 
     /**
@@ -23,10 +23,10 @@ class Utils_ConfigTest extends PHPUnit_Framework_TestCase
      */
     public function testEnvVariableConfigDir()
     {
-        putenv('SIMPLESAMLPHP_CONFIG_DIR=' . __DIR__);
+        putenv('SIMPLESAMLPHP_CONFIG_DIR=' . $_SERVER['DOCUMENT_ROOT']);
         $configDir = \SimpleSAML\Utils\Config::getConfigDir();
 
-        $this->assertEquals($configDir, __DIR__);
+        $this->assertEquals($configDir, $_SERVER['DOCUMENT_ROOT']);
     }
 
     /**
@@ -35,7 +35,7 @@ class Utils_ConfigTest extends PHPUnit_Framework_TestCase
     public function testInvalidEnvVariableConfigDirThrowsException()
     {
         // I used a random hash to ensure this test directory is always invalid
-        $invalidDir = __DIR__ . '/e9826ad19cbc4f5bf20c0913ffcd2ce6';
+        $invalidDir = $_SERVER['DOCUMENT_ROOT'] . '/e9826ad19cbc4f5bf20c0913ffcd2ce6';
         putenv('SIMPLESAMLPHP_CONFIG_DIR=' . $invalidDir);
 
         $this->setExpectedException(

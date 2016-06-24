@@ -48,7 +48,7 @@ class SAML2_Response_XmlSignatureWrappingTest extends PHPUnit_Framework_TestCase
 
     private function getSignedAssertionWithSignatureThatReferencesAnotherAssertion()
     {
-        $doc = SAML2_DOMDocumentFactory::fromFile(__DIR__ . '/signedAssertionWithInvalidReferencedId.xml');
+        $doc = SAML2_DOMDocumentFactory::fromFile($_SERVER['DOCUMENT_ROOT'] . '/signedAssertionWithInvalidReferencedId.xml');
         $assertion = new SAML2_Assertion($doc->firstChild);
 
         return $assertion;
@@ -56,7 +56,7 @@ class SAML2_Response_XmlSignatureWrappingTest extends PHPUnit_Framework_TestCase
 
     private function getSignedAssertionWithEmbeddedAssertionReferencedInSignature()
     {
-        $document = SAML2_DOMDocumentFactory::fromFile(__DIR__ . '/signedAssertionReferencedEmbeddedAssertion.xml');
+        $document = SAML2_DOMDocumentFactory::fromFile($_SERVER['DOCUMENT_ROOT'] . '/signedAssertionReferencedEmbeddedAssertion.xml');
         $assertion = new SAML2_Assertion($document->firstChild);
 
         return $assertion;

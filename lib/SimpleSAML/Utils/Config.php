@@ -66,7 +66,7 @@ class Config
      */
     public static function getConfigDir()
     {
-        // $configDir    = dirname(dirname(dirname(__DIR__))) . '/config';
+        // $configDir    = dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT']))) . '/config';
         // dave@oerfoundation.org 2016-06-14
         $configDir    = dirname($_SERVER['DOCUMENT_ROOT']) . '/config';
         //print("DEBUG: configDir = ". $configDir ."\n");

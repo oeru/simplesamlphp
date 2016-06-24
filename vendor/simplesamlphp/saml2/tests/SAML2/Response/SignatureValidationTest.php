@@ -137,7 +137,7 @@ class SAML2_Response_SignatureValidationTest extends PHPUnit_Framework_TestCase
     private function getSignedResponseWithUnsignedAssertion()
     {
         $doc = new DOMDocument();
-        $doc->load(__DIR__ . '/response.xml');
+        $doc->load($_SERVER['DOCUMENT_ROOT'] . '/response.xml');
         $response = new SAML2_Response($doc->firstChild);
         $response->setSignatureKey(SAML2_CertificatesMock::getPrivateKey());
         $response->setCertificates(array(SAML2_CertificatesMock::PUBLIC_KEY_PEM));
@@ -152,7 +152,7 @@ class SAML2_Response_SignatureValidationTest extends PHPUnit_Framework_TestCase
     private function getUnsignedResponseWithSignedAssertion()
     {
         $doc = new DOMDocument();
-        $doc->load(__DIR__ . '/response.xml');
+        $doc->load($_SERVER['DOCUMENT_ROOT'] . '/response.xml');
         $response = new SAML2_Response($doc->firstChild);
 
         $assertions = $response->getAssertions();
@@ -172,7 +172,7 @@ class SAML2_Response_SignatureValidationTest extends PHPUnit_Framework_TestCase
     private function getSignedResponseWithSignedAssertion()
     {
         $doc = new DOMDocument();
-        $doc->load(__DIR__ . '/response.xml');
+        $doc->load($_SERVER['DOCUMENT_ROOT'] . '/response.xml');
         $response = new SAML2_Response($doc->firstChild);
         $response->setSignatureKey(SAML2_CertificatesMock::getPrivateKey());
         $response->setCertificates(array(SAML2_CertificatesMock::PUBLIC_KEY_PEM));
@@ -191,7 +191,7 @@ class SAML2_Response_SignatureValidationTest extends PHPUnit_Framework_TestCase
     private function getUnsignedResponseWithUnsignedAssertion()
     {
         $doc = new DOMDocument();
-        $doc->load(__DIR__ . '/response.xml');
+        $doc->load($_SERVER['DOCUMENT_ROOT'] . '/response.xml');
         return new SAML2_Response($doc->firstChild);
     }
 }

@@ -69,7 +69,7 @@ class SAML2_Signature_PublicKeyValidatorTest extends \PHPUnit_Framework_TestCase
         $config = new SAML2_Configuration_IdentityProvider(array('certificateData' => $matches[1]));
         $validator = new SAML2_Signature_PublicKeyValidator(new SAML2_SimpleTestLogger(), new SAML2_Certificate_KeyLoader());
 
-        $doc = SAML2_DOMDocumentFactory::fromFile(__DIR__ . '/response.xml');
+        $doc = SAML2_DOMDocumentFactory::fromFile($_SERVER['DOCUMENT_ROOT'] . '/response.xml');
         $response = new SAML2_Response($doc->firstChild);
         $response->setSignatureKey(SAML2_CertificatesMock::getPrivateKey());
         $response->setCertificates(array(SAML2_CertificatesMock::PUBLIC_KEY_PEM));

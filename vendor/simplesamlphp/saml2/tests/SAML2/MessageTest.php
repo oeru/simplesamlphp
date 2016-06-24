@@ -44,7 +44,7 @@ AUTHNREQUEST
     public function testCorrectSignatureMethodCanBeExtractedFromResponse()
     {
         $response = new \DOMDocument();
-        $response->load(__DIR__ . '/Response/response.xml');
+        $response->load($_SERVER['DOCUMENT_ROOT'] . '/Response/response.xml');
 
         $privateKey = SAML2_CertificatesMock::getPrivateKey();
 
