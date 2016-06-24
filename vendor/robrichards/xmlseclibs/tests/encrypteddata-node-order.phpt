@@ -5,16 +5,16 @@ Makes sure that the child elements of EncryptedData appear in
 the correct order.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
 $dom = new DOMDocument();
-$dom->load(dirname(__FILE__) . '/basic-doc.xml');
+$dom->load($_SERVER['DOCUMENT_ROOT'] . '/basic-doc.xml');
 
 $objKey = new XMLSecurityKey(XMLSecurityKey::AES256_CBC);
 $objKey->generateSessionKey();
 
 $siteKey = new XMLSecurityKey(XMLSecurityKey::RSA_OAEP_MGF1P, array('type'=>'public'));
-$siteKey->loadKey(dirname(__FILE__) . '/mycert.pem', TRUE, TRUE);
+$siteKey->loadKey($_SERVER['DOCUMENT_ROOT'] . '/mycert.pem', TRUE, TRUE);
 
 $enc = new XMLSecEnc();
 $enc->setNode($dom->documentElement);

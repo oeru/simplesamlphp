@@ -2,20 +2,20 @@
 Basic Encryption: Content
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
-if (file_exists(dirname(__FILE__) . '/oaep_sha1.xml')) {
-    unlink(dirname(__FILE__) . '/oaep_sha1.xml');
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/oaep_sha1.xml')) {
+    unlink($_SERVER['DOCUMENT_ROOT'] . '/oaep_sha1.xml');
 }
 
 $dom = new DOMDocument();
-$dom->load(dirname(__FILE__) . '/basic-doc.xml');
+$dom->load($_SERVER['DOCUMENT_ROOT'] . '/basic-doc.xml');
 
 $objKey = new XMLSecurityKey(XMLSecurityKey::AES256_CBC);
 $objKey->generateSessionKey();
 
 $siteKey = new XMLSecurityKey(XMLSecurityKey::RSA_OAEP_MGF1P, array('type'=>'public'));
-$siteKey->loadKey(dirname(__FILE__) . '/mycert.pem', TRUE, TRUE);
+$siteKey->loadKey($_SERVER['DOCUMENT_ROOT'] . '/mycert.pem', TRUE, TRUE);
 
 $enc = new XMLSecEnc();
 $enc->setNode($dom->documentElement);
@@ -24,12 +24,12 @@ $enc->encryptKey($siteKey, $objKey);
 $enc->type = XMLSecEnc::Content;
 $encNode = $enc->encryptNode($objKey);
 
-$dom->save(dirname(__FILE__) . '/oaep_sha1.xml');
+$dom->save($_SERVER['DOCUMENT_ROOT'] . '/oaep_sha1.xml');
 
 $root = $dom->documentElement;
 echo $root->localName."\n";
 
-unlink(dirname(__FILE__) . '/oaep_sha1.xml');
+unlink($_SERVER['DOCUMENT_ROOT'] . '/oaep_sha1.xml');
 
 ?>
 --EXPECTF--

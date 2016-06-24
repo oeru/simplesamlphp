@@ -2,13 +2,13 @@
 Basic Verify
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
 $doc = new DOMDocument();
 $arTests = array('SIGN_TEST'=>'sign-basic-test.xml');
 
 foreach ($arTests AS $testName=>$testFile) {
-	$doc->load(dirname(__FILE__) . "/$testFile");
+	$doc->load($_SERVER['DOCUMENT_ROOT'] . "/$testFile");
 	$objXMLSecDSig = new XMLSecurityDSig();
 	
 	$objDSig = $objXMLSecDSig->locateSignature($doc);
@@ -34,7 +34,7 @@ foreach ($arTests AS $testName=>$testFile) {
 	$objKeyInfo = XMLSecEnc::staticLocateKeyInfo($objKey, $objDSig);
 
 	if (! $objKeyInfo->key && empty($key)) {
-		$objKey->loadKey(dirname(__FILE__) . '/mycert.pem', TRUE);
+		$objKey->loadKey($_SERVER['DOCUMENT_ROOT'] . '/mycert.pem', TRUE);
 	}
 
 	print $testName.": ";

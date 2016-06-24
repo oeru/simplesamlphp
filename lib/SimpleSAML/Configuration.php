@@ -496,7 +496,7 @@ class SimpleSAML_Configuration
 
     /**
      * Get the current working dir based on the current script file
-     * this is intended to replace the use of dirname(__FILE__): __FILE__ resolves
+     * this is intended to replace the use of $_SERVER['DOCUMENT_ROOT']: __FILE__ resolves
      * symbolic links in the path, which is not what we want.
      * It's quite advantageous to be able to have symbolically linked code trees
      * for SimpleSAMLPHP from a maintenance perspective. So trying to consolidate

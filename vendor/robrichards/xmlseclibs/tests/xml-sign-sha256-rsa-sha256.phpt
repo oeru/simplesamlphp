@@ -4,14 +4,14 @@ Signature RSA SHA256
 <?php if (version_compare(PHP_VERSION, '5.3.0', '<')) die('SKIP Requires PHP version 5.3.0 or newer.'); ?>
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
-if (file_exists(dirname(__FILE__) . '/sign-sha256-rsa-sha256-test.xml')) {
-    unlink(dirname(__FILE__) . '/sign-sha256-rsa-sha256-test.xml');
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/sign-sha256-rsa-sha256-test.xml')) {
+    unlink($_SERVER['DOCUMENT_ROOT'] . '/sign-sha256-rsa-sha256-test.xml');
 }
 
 $doc = new DOMDocument();
-$doc->load(dirname(__FILE__) . '/basic-doc.xml');
+$doc->load($_SERVER['DOCUMENT_ROOT'] . '/basic-doc.xml');
 
 $objDSig = new XMLSecurityDSig();
 
@@ -21,7 +21,7 @@ $objDSig->addReference($doc, XMLSecurityDSig::SHA256, array('http://www.w3.org/2
 
 $objKey = new XMLSecurityKey(XMLSecurityKey::RSA_SHA256, array('type'=>'private'));
 /* load private key */
-$objKey->loadKey(dirname(__FILE__) . '/privkey.pem', TRUE);
+$objKey->loadKey($_SERVER['DOCUMENT_ROOT'] . '/privkey.pem', TRUE);
 
 /* if key has Passphrase, set it using $objKey->passphrase = <passphrase> " */
 
@@ -29,13 +29,13 @@ $objKey->loadKey(dirname(__FILE__) . '/privkey.pem', TRUE);
 $objDSig->sign($objKey);
 
 /* Add associated public key */
-$objDSig->add509Cert(file_get_contents(dirname(__FILE__) . '/mycert.pem'));
+$objDSig->add509Cert(file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/mycert.pem'));
 
 $objDSig->appendSignature($doc->documentElement);
-$doc->save(dirname(__FILE__) . '/sign-sha256-rsa-sha256-test.xml');
+$doc->save($_SERVER['DOCUMENT_ROOT'] . '/sign-sha256-rsa-sha256-test.xml');
 
-$sign_output = file_get_contents(dirname(__FILE__) . '/sign-sha256-rsa-sha256-test.xml');
-$sign_output_def = file_get_contents(dirname(__FILE__) . '/sign-sha256-rsa-sha256-test.res');
+$sign_output = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/sign-sha256-rsa-sha256-test.xml');
+$sign_output_def = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/sign-sha256-rsa-sha256-test.res');
 if ($sign_output != $sign_output_def) {
 	echo "NOT THE SAME\n";
 }

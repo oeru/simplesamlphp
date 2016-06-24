@@ -12,7 +12,7 @@
  * @license http://www.apache.org/licenses/LICENSE-2.0 Apache
  */
 
-$path_extra = dirname(dirname(dirname(__FILE__)));
+$path_extra = dirname(dirname($_SERVER['DOCUMENT_ROOT']));
 $path = ini_get('include_path');
 $path = $path_extra . PATH_SEPARATOR . $path;
 ini_set('include_path', $path);
@@ -423,7 +423,7 @@ function generate_config($download = false) {
 <h2>OpenID Example Server Configuration</h2>
 
 <p>
-Put the following text into <strong><?php print dirname(__FILE__); print DIRECTORY_SEPARATOR; ?>config.php</strong>.
+Put the following text into <strong><?php print $_SERVER['DOCUMENT_ROOT']; print DIRECTORY_SEPARATOR; ?>config.php</strong>.
 </p>
 
 <p>

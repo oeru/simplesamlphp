@@ -2,10 +2,10 @@
 Test for ds:RetrievalMethod.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
 $doc = new DOMDocument();
-$doc->load(dirname(__FILE__) . "/retrievalmethod-findkey.xml");
+$doc->load($_SERVER['DOCUMENT_ROOT'] . "/retrievalmethod-findkey.xml");
 
 $objenc = new XMLSecEnc();
 $encData = $objenc->locateEncryptedData($doc);

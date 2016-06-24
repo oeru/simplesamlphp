@@ -2,10 +2,10 @@
 Certificate thumbprint check
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
 $siteKey = new XMLSecurityKey(XMLSecurityKey::RSA_OAEP_MGF1P, array('type'=>'public'));
-$siteKey->loadKey(dirname(__FILE__) . '/mycert.pem', TRUE, TRUE);
+$siteKey->loadKey($_SERVER['DOCUMENT_ROOT'] . '/mycert.pem', TRUE, TRUE);
 
 $thumbprint = $siteKey->getX509Thumbprint();
 echo $thumbprint."\n";

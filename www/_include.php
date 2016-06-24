@@ -29,7 +29,7 @@ if (version_compare(PHP_VERSION, '5.4.0', '<')) {
 }
 
 // initialize the autoloader
-require_once(dirname(dirname(__FILE__)).'/lib/_autoload.php');
+require_once(dirname($_SERVER['DOCUMENT_ROOT']).'/lib/_autoload.php');
 
 // enable assertion handler for all pages
 SimpleSAML_Error_Assertion::installHandler();

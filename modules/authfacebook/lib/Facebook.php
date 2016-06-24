@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(dirname(__FILE__)) . '/extlibinc/base_facebook.php');
+require_once(dirname($_SERVER['DOCUMENT_ROOT']) . '/extlibinc/base_facebook.php');
 
 /**
  * Extends the BaseFacebook class with the intent of using

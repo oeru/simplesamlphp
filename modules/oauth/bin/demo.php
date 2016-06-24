@@ -11,13 +11,13 @@ try {
 
 
 	// This is the base directory of the SimpleSAMLphp installation
-	$baseDir = dirname(dirname(dirname(dirname(__FILE__))));
+	$baseDir = dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT'])));
 
 	// Add library autoloader.
 	require_once($baseDir . '/lib/_autoload.php');
 
 
-	require_once(dirname(dirname(__FILE__)) . '/libextinc/OAuth.php');
+	require_once(dirname($_SERVER['DOCUMENT_ROOT']) . '/libextinc/OAuth.php');
 
 	// Needed in order to make session_start to be called before output is printed.
 	$session = SimpleSAML_Session::getSessionFromRequest();

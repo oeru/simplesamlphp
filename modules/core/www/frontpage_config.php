@@ -153,7 +153,7 @@ $t->data['links_federation'] = $links_federation;
 $t->data['enablematrix'] = $enablematrix;
 $t->data['funcmatrix'] = $funcmatrix;
 $t->data['version'] = $config->getVersion();
-$t->data['directory'] = dirname(dirname(dirname(dirname(__FILE__))));
+$t->data['directory'] = dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT'])));
 
 $t->show();
 

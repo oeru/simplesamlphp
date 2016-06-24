@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(dirname(__FILE__)) . '/libextinc/OAuth.php');
+require_once(dirname($_SERVER['DOCUMENT_ROOT']) . '/libextinc/OAuth.php');
 
 $oauthconfig = SimpleSAML_Configuration::getConfig('module_oauth.php');
 

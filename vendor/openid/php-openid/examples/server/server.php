@@ -1,6 +1,6 @@
 <?php
 
-$path_extra = dirname(dirname(dirname(__FILE__)));
+$path_extra = dirname(dirname($_SERVER['DOCUMENT_ROOT']));
 $path = ini_get('include_path');
 $path = $path_extra . PATH_SEPARATOR . $path;
 ini_set('include_path', $path);

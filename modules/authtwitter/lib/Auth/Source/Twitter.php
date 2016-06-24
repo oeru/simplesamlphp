@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(dirname(dirname(dirname(dirname(__FILE__))))) . '/oauth/libextinc/OAuth.php');
+require_once(dirname(dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT'])))) . '/oauth/libextinc/OAuth.php');
 
 /**
  * Authenticate using Twitter.

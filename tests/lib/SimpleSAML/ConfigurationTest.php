@@ -172,7 +172,7 @@ class Test_SimpleSAML_Configuration extends PHPUnit_Framework_TestCase
      */
     public function testGetBaseDir() {
         $c = SimpleSAML_Configuration::loadFromArray(array());
-        $this->assertEquals($c->getBaseDir(), dirname(dirname(dirname(dirname(__FILE__)))) . '/');
+        $this->assertEquals($c->getBaseDir(), dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT']))) . '/');
 
         $c = SimpleSAML_Configuration::loadFromArray(array(
             'basedir' => '/basedir',

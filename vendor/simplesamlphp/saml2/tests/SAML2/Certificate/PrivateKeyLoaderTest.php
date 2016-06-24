@@ -39,13 +39,13 @@ class SAML2_Certificate_PrivateKeyLoaderTest extends \PHPUnit_Framework_TestCase
         return array(
             'no passphrase'   => array(
                 new SAML2_Configuration_PrivateKey(
-                    dirname(__FILE__) . '/File/a_fake_private_key_file.pem',
+                    $_SERVER['DOCUMENT_ROOT'] . '/File/a_fake_private_key_file.pem',
                     SAML2_Configuration_PrivateKey::NAME_DEFAULT
                 )
             ),
             'with passphrase' => array(
                 new SAML2_Configuration_PrivateKey(
-                    dirname(__FILE__) . '/File/a_fake_private_key_file.pem',
+                    $_SERVER['DOCUMENT_ROOT'] . '/File/a_fake_private_key_file.pem',
                     SAML2_Configuration_PrivateKey::NAME_DEFAULT,
                     'foo bar baz'
                 )

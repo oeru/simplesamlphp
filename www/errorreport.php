@@ -88,7 +88,7 @@ $message = sprintf(
     $data['url'],
     $data['url'],
     htmlspecialchars(php_uname('n')),
-    dirname(dirname(__FILE__)),
+    dirname($_SERVER['DOCUMENT_ROOT']),
     $data['trackId'],
     $data['version'],
     $data['reportId'],

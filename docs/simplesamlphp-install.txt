@@ -320,7 +320,7 @@ Now, we need to make a few configuration changes. First, let's edit
 
 Change the two lines from:
 
-    require_once(dirname(dirname(__FILE__)) . '/lib/_autoload.php');
+    require_once(dirname($_SERVER['DOCUMENT_ROOT']) . '/lib/_autoload.php');
 
 to something like:
 
@@ -329,7 +329,7 @@ to something like:
 And then at the end of the file, you need to change another line
 from:
 
-    $configdir = dirname(dirname(__FILE__)) . '/config';
+    $configdir = dirname($_SERVER['DOCUMENT_ROOT']) . '/config';
 
 to:
 

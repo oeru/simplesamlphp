@@ -65,7 +65,7 @@ class SAML2_DOMDocumentFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFileThatDoesNotContainXMLCannotBeLoaded()
     {
-        $file = realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'domdocument_invalid_xml.xml';
+        $file = realpath($_SERVER['DOCUMENT_ROOT']) . DIRECTORY_SEPARATOR . 'domdocument_invalid_xml.xml';
 
         SAML2_DOMDocumentFactory::fromFile($file);
     }
@@ -75,7 +75,7 @@ class SAML2_DOMDocumentFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFileWithValidXMLCanBeLoaded()
     {
-        $file = realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'domdocument_valid_xml.xml';
+        $file = realpath($_SERVER['DOCUMENT_ROOT']) . DIRECTORY_SEPARATOR . 'domdocument_valid_xml.xml';
 
         $document = SAML2_DOMDocumentFactory::fromFile($file);
 
@@ -89,7 +89,7 @@ class SAML2_DOMDocumentFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFileThatContainsDocTypeIsNotAccepted()
     {
-        $file = realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'domdocument_doctype.xml';
+        $file = realpath($_SERVER['DOCUMENT_ROOT']) . DIRECTORY_SEPARATOR . 'domdocument_doctype.xml';
         SAML2_DOMDocumentFactory::fromFile($file);
     }
 
@@ -111,7 +111,7 @@ class SAML2_DOMDocumentFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testEmptyFileIsNotValid()
     {
-        $file = realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'domdocument_empty.xml';
+        $file = realpath($_SERVER['DOCUMENT_ROOT']) . DIRECTORY_SEPARATOR . 'domdocument_empty.xml';
         SAML2_DOMDocumentFactory::fromFile($file);
     }
 

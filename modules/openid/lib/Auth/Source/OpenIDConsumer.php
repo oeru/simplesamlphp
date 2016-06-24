@@ -11,7 +11,7 @@ if (defined('E_DEPRECATED')) {
 }
 
 // Add the OpenID library search path.
-set_include_path(get_include_path() . PATH_SEPARATOR . dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . '/lib');
+set_include_path(get_include_path() . PATH_SEPARATOR . dirname(dirname(dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT']))))) . '/lib');
 
 require_once('Auth/OpenID/AX.php');
 require_once('Auth/OpenID/SReg.php');

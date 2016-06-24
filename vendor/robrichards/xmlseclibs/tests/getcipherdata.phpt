@@ -2,10 +2,10 @@
 Test the getCipherData() function.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
 $doc = new DOMDocument();
-$doc->load(dirname(__FILE__) . '/oaep_sha1-res.xml');
+$doc->load($_SERVER['DOCUMENT_ROOT'] . '/oaep_sha1-res.xml');
 
 
 $objenc = new XMLSecEnc();

@@ -2,7 +2,7 @@
 Extract Public Key
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
 $doc = new DOMDocument();
 $arTests = array(
@@ -11,7 +11,7 @@ $arTests = array(
 );
 
 foreach ($arTests AS $testName=>$testFile) {
-	$doc->load(dirname(__FILE__) . "/$testFile");
+	$doc->load($_SERVER['DOCUMENT_ROOT'] . "/$testFile");
 	$objXMLSecDSig = new XMLSecurityDSig();
 
 	$objDSig = $objXMLSecDSig->locateSignature($doc);
@@ -30,7 +30,7 @@ foreach ($arTests AS $testName=>$testFile) {
 
 	$objKey = $objXMLSecDSig->locateKey();
 	if ($testName == 'SIGN_TEST') {
-		$objKey->loadKey(dirname(__FILE__) . '/mycert.pem', TRUE);
+		$objKey->loadKey($_SERVER['DOCUMENT_ROOT'] . '/mycert.pem', TRUE);
 		print $testName.": ";
 		if ($objXMLSecDSig->verify($objKey)) {
 			print "Signature validated!";
@@ -41,7 +41,7 @@ foreach ($arTests AS $testName=>$testFile) {
 	if ($testName == 'ERROR_TEST') {
 		print $testName.": ";
 		try {
-			$objKey->loadKey(dirname(__FILE__) . '/mycert.win.pem', TRUE);
+			$objKey->loadKey($_SERVER['DOCUMENT_ROOT'] . '/mycert.win.pem', TRUE);
 			print "PASS";
 		} catch (Exception $e) {
 			print $e->getMessage();

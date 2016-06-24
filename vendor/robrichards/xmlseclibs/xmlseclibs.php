@@ -40,7 +40,7 @@
  * @version   1.4.1
  */
 
-$xmlseclibs_srcdir = dirname(__FILE__) . '/src/';
+$xmlseclibs_srcdir = $_SERVER['DOCUMENT_ROOT'] . '/src/';
 require $xmlseclibs_srcdir . '/XMLSecurityKey.php';
 require $xmlseclibs_srcdir . '/XMLSecurityDSig.php';
 require $xmlseclibs_srcdir . '/XMLSecEnc.php';

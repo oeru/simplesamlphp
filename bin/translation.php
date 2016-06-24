@@ -2,7 +2,7 @@
 <?php
 
 // This is the base directory of the SimpleSAMLphp installation
-//$baseDir = dirname(dirname(__FILE__));
+//$baseDir = dirname($_SERVER['DOCUMENT_ROOT']);
 // Dave Lane, dave@oerufoundation.org 2016-06-16
 $baseDir = dirname(SimpleSAML_Configuration::getCurrentDir());
 

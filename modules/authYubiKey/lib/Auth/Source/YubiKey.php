@@ -180,7 +180,7 @@ class sspmod_authYubiKey_Auth_Source_YubiKey extends SimpleSAML_Auth_Source {
 	protected function login($otp) {
 		assert('is_string($otp)');
 
-		require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/libextinc/Yubico.php';
+		require_once dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT']))) . '/libextinc/Yubico.php';
 
 		$attributes = array();
 

@@ -1,5 +1,5 @@
 <?php
-$baseDir = dirname(dirname(__FILE__));
+$baseDir = dirname($_SERVER['DOCUMENT_ROOT']);
 
 require_once $baseDir . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . '_autoload.php';
 require_once SimpleSAML\Utils\Config::getConfigDir(). DIRECTORY_SEPARATOR . 'config.php';

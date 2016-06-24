@@ -81,7 +81,7 @@ class SAML2_Certificate_KeyLoaderTest extends \PHPUnit_Framework_TestCase
      */
     public function loading_a_file_with_the_wrong_format_throws_an_exception()
     {
-        $filePath = dirname(__FILE__) . '/File/';
+        $filePath = $_SERVER['DOCUMENT_ROOT'] . '/File/';
         $this->keyLoader->loadCertificateFile($filePath . 'not_a_key.crt');
     }
 
@@ -92,7 +92,7 @@ class SAML2_Certificate_KeyLoaderTest extends \PHPUnit_Framework_TestCase
      */
     public function loading_a_certificate_from_file_creates_a_key()
     {
-        $file = dirname(__FILE__) . '/File/example.org.crt';
+        $file = $_SERVER['DOCUMENT_ROOT'] . '/File/example.org.crt';
         $this->keyLoader->loadCertificateFile($file);
 
         $loadedKeys = $this->keyLoader->getKeys();
@@ -135,7 +135,7 @@ class SAML2_Certificate_KeyLoaderTest extends \PHPUnit_Framework_TestCase
      */
     public function loading_a_certificate_file_from_configuration_creates_key()
     {
-        $file = dirname(__FILE__) . '/File/example.org.crt';
+        $file = $_SERVER['DOCUMENT_ROOT'] . '/File/example.org.crt';
         $this->configurationMock
             ->shouldReceive('getKeys')
             ->atMost()
@@ -162,7 +162,7 @@ class SAML2_Certificate_KeyLoaderTest extends \PHPUnit_Framework_TestCase
      */
     public function loading_an_invalid_certificate_file_from_configuration_throws_exception()
     {
-        $file = dirname(__FILE__) . '/File/not_a_key.crt';
+        $file = $_SERVER['DOCUMENT_ROOT'] . '/File/not_a_key.crt';
         $this->configurationMock
             ->shouldReceive('getKeys')
             ->atMost()

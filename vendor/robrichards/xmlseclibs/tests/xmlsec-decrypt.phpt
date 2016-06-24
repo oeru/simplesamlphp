@@ -2,16 +2,16 @@
 Basic Decryption
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../xmlseclibs.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/../xmlseclibs.php');
 
 /* When we need to locate our own key based on something like a key name */
 function locateLocalKey($objKey) {
 	/* In this example the key is identified by filename */
 	$filename = $objKey->name;
 	if (! empty($filename)) {
-		$objKey->loadKey(dirname(__FILE__) . "/$filename", TRUE);
+		$objKey->loadKey($_SERVER['DOCUMENT_ROOT'] . "/$filename", TRUE);
 	} else {
-	    $objKey->loadKey(dirname(__FILE__) . "/privkey.pem", TRUE);
+	    $objKey->loadKey($_SERVER['DOCUMENT_ROOT'] . "/privkey.pem", TRUE);
 	}
 }
 
@@ -23,7 +23,7 @@ foreach ($arTests AS $testName=>$testFile) {
 	$output = NULL;
 	print "$testName: ";
 
-	$doc->load(dirname(__FILE__) . "/$testFile");
+	$doc->load($_SERVER['DOCUMENT_ROOT'] . "/$testFile");
 	
 	try {
 		$objenc = new XMLSecEnc();
@@ -71,7 +71,7 @@ foreach ($arTests AS $testName=>$testFile) {
 
 	}
 
-	$outfile = dirname(__FILE__) . "/basic-doc.xml";
+	$outfile = $_SERVER['DOCUMENT_ROOT'] . "/basic-doc.xml";
 	$res = NULL;
 	if (file_exists($outfile)) {
 	    $resDoc = new DOMDocument();
