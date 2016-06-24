@@ -29,14 +29,7 @@ if (version_compare(PHP_VERSION, '5.4.0', '<')) {
 }
 
 // initialize the autoloader
-//require_once(dirname(dirname(__FILE__)).'/lib/_autoload.php');
-// dave@oerfoundation.org 2016-06-14
-// updated to allow for symbolically linked SimpleSAMLPHP dir.
-// see also lib/SimpleSAML/Utils/Config.php
-//print("DEBUG: ". print_r($_SERVER) . "\n");
-//print("DEBUG: __FILE__ = " . __FILE__ . ", 'DOCUMENT_ROOT' = ". $_SERVER['DOCUMENT_ROOT'] . "...\n");
-//print("DEBUG requiring ". dirname($_SERVER['DOCUMENT_ROOT']).'/lib/_autoload.php');
-require_once(dirname($_SERVER['DOCUMENT_ROOT']).'/lib/_autoload.php');
+require_once(dirname(dirname(__FILE__)).'/lib/_autoload.php');
 
 // enable assertion handler for all pages
 SimpleSAML_Error_Assertion::installHandler();

@@ -22,9 +22,7 @@ class SimpleSAML_Module
      */
     public static function getModuleDir($module)
     {
-        //$baseDir = dirname(dirname(dirname(__FILE__))).'/modules';
-        // dave@oerfoundation.org 2016-06-14
-        $baseDir = dirname(dirname($_SERVER['DOCUMENT_ROOT'])).'/modules';
+        $baseDir = dirname(dirname(dirname(__FILE__))).'/modules';
         $moduleDir = $baseDir.'/'.$module;
 
         return $moduleDir;

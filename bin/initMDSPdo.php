@@ -2,9 +2,7 @@
 <?php
 
 // This is the base directory of the SimpleSAMLphp installation
-//$baseDir = dirname(dirname(__FILE__));
-// dave@oerfoundation.org 2016-06-16
-$baseDir = dirname($_SERVER['DOCUMENT_ROOT']);
+$baseDir = dirname(dirname(__FILE__));
 
 // Add library autoloader and configuration
 require_once $baseDir . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . '_autoload.php';

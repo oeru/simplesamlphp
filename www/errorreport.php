@@ -88,9 +88,7 @@ $message = sprintf(
     $data['url'],
     $data['url'],
     htmlspecialchars(php_uname('n')),
-    //dirname(dirname(__FILE__)),
-    // dave@oerfoundation.org 2016-06-14 
-    dirname($_SERVER['DOCUMENT_ROOT']),
+    dirname(dirname(__FILE__)),
     $data['trackId'],
     $data['version'],
     $data['reportId'],
